@@ -32,6 +32,8 @@ export const PageWrapper = styled.div`
   height: 100%;
   max-width: 100%;
   max-height: 100%;
+
+  background: linear-gradient(to bottom, #EBCBFF, #FFEBBF);
   
   gap: 1rem;
 `;
