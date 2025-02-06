@@ -41,7 +41,6 @@ const TitleWrapper = styled.div`
 `;
 
 const TitleText = styled.span`
-  font-size: 14px;
   font-weight: bold;
   width: 125px;
   height: 30px;

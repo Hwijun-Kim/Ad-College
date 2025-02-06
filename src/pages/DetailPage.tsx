@@ -21,14 +21,16 @@ const DetailPage = () => {
 
 const ComponentWrapper = styled.div`
   display: flex;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 `;
 
 const Detail = styled.div`
-  width: 300px;
+  width: 70%;
   height: 450px;
   border-radius: 24px;
   background: white;
