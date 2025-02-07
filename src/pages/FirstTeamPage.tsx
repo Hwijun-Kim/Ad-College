@@ -4,6 +4,7 @@ import FirstTeamLogo from "../assets/1teamLogo.png";
 import styled from "styled-components";
 import Title from "../components/Title.tsx";
 import StoreImage from "../assets/1teamStore.png";
+import Footer from "../components/Footer.tsx";
 
 const FirstTeamPage = () => {
     return (
@@ -30,6 +31,9 @@ const FirstTeamPage = () => {
                 </TextWrapper>
               </StorePreview>
             </PreviewWrapper>
+            <Title title={"스토어 상세"} />
+            <span>이미지와 영상을 통해 1팀의 상점을 둘러보세요.</span>
+            <Footer />
           </ComponentWrapper>
         </PageWrapper>
       </>

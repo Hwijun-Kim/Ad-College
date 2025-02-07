@@ -5,6 +5,7 @@ import Title from "../components/Title.tsx";
 import styled from "styled-components";
 import { BoldText, BoldTextBox, PreviewWrapper, StarIcon, StorePreview, TextWrapper } from "./FirstTeamPage.tsx";
 import StoreImage from "../assets/2teamStore.png";
+import Footer from "../components/Footer.tsx";
 
 const SecondTeamPage = () => {
     return (
@@ -31,6 +32,9 @@ const SecondTeamPage = () => {
                 </TextWrapper>
               </StorePreview>
             </PreviewWrapper>
+            <Title title={"스토어 상세"} />
+            <span>이미지와 영상을 통해 2팀의 상점을 둘러보세요.</span>
+            <Footer />
           </ComponentWrapper>
         </PageWrapper>
       </>
