@@ -1,9 +1,15 @@
-import { PageWrapper } from "./MainPage.tsx";
 import Header from "../components/Header.tsx";
 import ThirdTeamLogo from "../assets/3teamLogo.png";
 import Title from "../components/Title.tsx";
-import styled from "styled-components";
-import { BoldText, BoldTextBox, PreviewWrapper, StarIcon, StorePreview, TextWrapper } from "./FirstTeamPage.tsx";
+import {
+  BoldText,
+  BoldTextBox,
+  ComponentWrapper,
+  PreviewWrapper,
+  StarIcon,
+  StorePreview, TeamPageWrapper,
+  TextWrapper
+} from "./FirstTeamPage.tsx";
 import StoreImage from "../assets/3teamStore.png";
 import Footer from "../components/Footer.tsx";
 
@@ -11,7 +17,7 @@ const ThirdTeamPage = () => {
     return (
       <>
         <Header logoImage={ThirdTeamLogo} />
-        <PageWrapper>
+        <TeamPageWrapper>
           <ComponentWrapper>
             <Title title={"스토어 소개"} />
             <TextWrapper>
@@ -24,29 +30,21 @@ const ThirdTeamPage = () => {
                 <StarIcon className="star-icon top-right" />
                 <StarIcon className="star-icon bottom-left" />
                 <StarIcon className="star-icon bottom-right" />
-                <BoldTextBox>무인 아이스크림 가게</BoldTextBox>
+                <BoldTextBox>GACHA-BLE</BoldTextBox>
                 <img src={StoreImage} alt="store" />
                 <TextWrapper>
-                  <span>쓰레기를 재활용하고 조금 더</span>
-                  <span>소중한 추억을 남길 수 있다.</span>
+                  <span>깔수록 깨끗해지는</span>
+                  <span>친환경 가챠 캡슐!</span>
                 </TextWrapper>
               </StorePreview>
             </PreviewWrapper>
             <Title title={"스토어 상세"} />
             <span>이미지와 영상을 통해 3팀의 상점을 둘러보세요.</span>
-            <Footer />
+            <Footer isTeamPage={true} />
           </ComponentWrapper>
-        </PageWrapper>
+        </TeamPageWrapper>
       </>
     );
 };
-
-const ComponentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-`;
 
 export default ThirdTeamPage;

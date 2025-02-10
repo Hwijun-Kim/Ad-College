@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
-const Footer = () => {
+interface FooterProps {
+  isTeamPage?: boolean;
+}
+
+const Footer = ({ isTeamPage = false }: FooterProps) => {
   return (
     <FooterContent>
       <span>@adcollege</span>
       <span>adcollege.head@gmail.com</span>
+      {isTeamPage && <span>페이지 제작: 김윤주, 김휘준, 이다은, 이연주</span>}
     </FooterContent>
   );
 };

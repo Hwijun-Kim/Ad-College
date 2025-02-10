@@ -1,16 +1,26 @@
-import { PageWrapper } from "./MainPage.tsx";
 import Header from "../components/Header.tsx";
 import FirstTeamLogo from "../assets/1teamLogo.png";
 import styled from "styled-components";
 import Title from "../components/Title.tsx";
 import StoreImage from "../assets/1teamStore.png";
 import Footer from "../components/Footer.tsx";
+import ImgSlider from "../components/ImgSlider.tsx";
+
+import Img1 from "../assets/image12.png";
+import Img2 from "../assets/2teamStore.png";
+import Img3 from "../assets/3teamStore.png";
+
+const images = [
+  Img1,
+  Img2,
+  Img3,
+];
 
 const FirstTeamPage = () => {
     return (
       <>
         <Header logoImage={FirstTeamLogo} />
-        <PageWrapper>
+        <TeamPageWrapper>
           <ComponentWrapper>
             <Title title={"스토어 소개"} />
             <TextWrapper>
@@ -23,29 +33,45 @@ const FirstTeamPage = () => {
                 <StarIcon className="star-icon top-right" />
                 <StarIcon className="star-icon bottom-left" />
                 <StarIcon className="star-icon bottom-right" />
-                <BoldTextBox>무인 아이스크림 가게</BoldTextBox>
+                <BoldTextBox>SAVENERGY</BoldTextBox>
                 <img src={StoreImage} alt="store" />
                 <TextWrapper>
-                  <span>쓰레기를 재활용하고 조금 더</span>
-                  <span>소중한 추억을 남길 수 있다.</span>
+                  <span>보증금 제도를 통해 환경을 보호하는</span>
+                  <span>일회용 보조배터리 자판기!</span>
                 </TextWrapper>
               </StorePreview>
             </PreviewWrapper>
+            <SectionDivider />
             <Title title={"스토어 상세"} />
             <span>이미지와 영상을 통해 1팀의 상점을 둘러보세요.</span>
-            <Footer />
+            <ImgWrapper>
+              <ImgSlider images={images} />
+            </ImgWrapper>
+            <LinkButton>릴스 보러가기</LinkButton>
+            <SectionDivider />
+            <Footer isTeamPage={true} />
           </ComponentWrapper>
-        </PageWrapper>
+        </TeamPageWrapper>
       </>
     );
 };
 
-const ComponentWrapper = styled.div`
+export const TeamPageWrapper = styled.div`
+  width: 100%;
+  height: calc(100% - 50px);
+  background: linear-gradient(to bottom, #EBCBFF, #FFEBBF);
+  overflow-y: auto;
+`;
+
+export const ComponentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
+  width: 100%;
+  min-height: 100%;
+  padding: 60px 0 2rem 0;
 `;
 
 export const BoldText = styled.span`
@@ -68,6 +94,20 @@ export const PreviewWrapper = styled.div`
   background: white;
   border-radius: 14px;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+`;
+
+export const SectionDivider = styled.div`
+  width: 100%;
+  height: 165px;
+`;
+
+export const LinkButton = styled.button`
+  width: 260px;
+  height: 30px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  background: linear-gradient(to bottom, #A98BF8, #B375F8);
 `;
 
 export const StorePreview = styled.div`
@@ -118,6 +158,17 @@ export const BoldTextBox = styled.span`
   background: #A98BF8;
   border-radius: 23px;
   align-content: center;
+`;
+
+export const ImgWrapper = styled.div`
+  width: 90%;
+  height: 477px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StarIcon = ({ className }: { className?: string }) => (
