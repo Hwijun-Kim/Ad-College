@@ -6,14 +6,37 @@ import StoreImage from "../assets/1teamStore.png";
 import Footer from "../components/Footer.tsx";
 import ImgSlider from "../components/ImgSlider.tsx";
 
-import Img1 from "../assets/image12.png";
-import Img2 from "../assets/2teamStore.png";
-import Img3 from "../assets/3teamStore.png";
+import Img1 from "../assets/1Team/1T-1.png";
+import Img2 from "../assets/1Team/1T-2.png";
+import Img3 from "../assets/1Team/1T-3.png";
+import Img4 from "../assets/1Team/1T-4.png";
+import Img5 from "../assets/1Team/1T-5.png";
+import Img6 from "../assets/1Team/1T-6.png";
+import Img7 from "../assets/1Team/1T-7.png";
+import Img8 from "../assets/1Team/1T-8.png";
+import Img9 from "../assets/1Team/1T-9.png";
+import Img10 from "../assets/1Team/1T-10.png";
+import Img11 from "../assets/1Team/1T-11.png";
+import Img12 from "../assets/1Team/1T-12.png";
+import Img13 from "../assets/1Team/1T-13.png";
+import Img14 from "../assets/1Team/1T-14.png";
 
 const images = [
   Img1,
   Img2,
   Img3,
+  Img4,
+  Img5,
+  Img5,
+  Img6,
+  Img7,
+  Img8,
+  Img9,
+  Img10,
+  Img11,
+  Img12,
+  Img13,
+  Img14
 ];
 
 const FirstTeamPage = () => {

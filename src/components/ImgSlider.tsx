@@ -104,6 +104,7 @@ const Slide = styled.div`
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  aspect-ratio: 3 / 5;
 
   img {
     display: block;
@@ -111,8 +112,7 @@ const Slide = styled.div`
     max-height: 100%;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    border-radius: 24px;
+    object-fit: cover;
     user-select: none;
   }
 `;
