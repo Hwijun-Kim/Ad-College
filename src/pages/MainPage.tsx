@@ -26,7 +26,7 @@ const MainPage = () => {
           <TeamIcon src={FirstTeamImg} top="22%" left="42%" width="117px" height="117px" onClick={() => navigate("/firstteam")} />
           <TeamIcon src={SecondTeamImg} top="39%" left="70%" width="126px" height="124px" onClick={() => navigate("/secondteam")} />
           <TeamIcon src={ThirdTeamImg} top="59%" left="40%" width="138px" height="138px" onClick={() => navigate("/thirdteam")} />
-          <TeamIcon src={DetailImg} top="43%" left="15%" onClick={() => navigate("/detail")} />
+          <TeamIcon src={DetailImg} top="43%" left="15%" width="44px" height="43px" onClick={() => navigate("/detail")} />
           <TeamIcon src={ClickImg} top="17%" left="70%" width="72px" height="51px" />
         </LandImgWrapper>
         <Footer />
