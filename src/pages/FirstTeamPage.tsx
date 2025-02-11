@@ -57,7 +57,7 @@ const FirstTeamPage = () => {
                 <StarIcon className="star-icon bottom-left" />
                 <StarIcon className="star-icon bottom-right" />
                 <BoldTextBox>SAVENERGY</BoldTextBox>
-                <img src={StoreImage} alt="store" />
+                <StoreImg src={StoreImage} alt="store" />
                 <TextWrapper>
                   <Text1>보증금 제도를 통해 환경을 보호하는</Text1>
                   <Text2>일회용 보조배터리 자판기!</Text2>
@@ -95,6 +95,11 @@ export const ComponentWrapper = styled.div`
   width: 100%;
   min-height: 100%;
   padding: 60px 0 0 0;
+`;
+
+export const StoreImg = styled.img`
+  width: 180px;
+  height: 180px;
 `;
 
 export const BoldText = styled.span`

@@ -9,7 +9,7 @@ import {
   LinkButton,
   PreviewWrapper,
   SectionDivider,
-  StarIcon,
+  StarIcon, StoreImg,
   StorePreview, TeamPageWrapper, Text0, Text1, Text2,
   TextWrapper
 } from "./FirstTeamPage.tsx";
@@ -68,7 +68,7 @@ const SecondTeamPage = () => {
                 <StarIcon className="star-icon bottom-left" />
                 <StarIcon className="star-icon bottom-right" />
                 <BoldTextBox>Separ/Ate</BoldTextBox>
-                <img src={StoreImage} alt="store" />
+                <StoreImg src={StoreImage} alt="store" />
                 <TextWrapper>
                   <Text1>단순한 포장 방식이 아니다</Text1>
                   <Text2>패스트푸드 전체를 바꾸는 움직임!</Text2>

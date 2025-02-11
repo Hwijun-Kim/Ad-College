@@ -4,9 +4,9 @@ import MainLogo from "../assets/MainLogo.png";
 import LandImg from "../assets/LandImg.png";
 import { TextWrapper } from "./FirstTeamPage.tsx";
 import Footer from "../components/Footer.tsx";
-import FirstTeamImg from "../assets/1TeamMain.png";
-import SecondTeamImg from "../assets/2TeamMain.png";
-import ThirdTeamImg from "../assets/3TeamMain.png";
+import FirstTeamImg from "../assets/1teamStore.png";
+import SecondTeamImg from "../assets/2teamStore.png";
+import ThirdTeamImg from "../assets/3teamStore.png";
 import ClickImg from "../assets/ClickImg.png";
 import DetailImg from "../assets/DetailImg.png";
 
@@ -23,11 +23,11 @@ const MainPage = () => {
         <LandImgWrapper>
           <LandImage src={LandImg} alt="land" />
 
-          <TeamIcon src={FirstTeamImg} top="22%" left="41%" onClick={() => navigate("/firstteam")} />
-          <TeamIcon src={SecondTeamImg} top="37%" left="70%" onClick={() => navigate("/secondteam")} />
-          <TeamIcon src={ThirdTeamImg} top="59%" left="43%" onClick={() => navigate("/thirdteam")} />
+          <TeamIcon src={FirstTeamImg} top="22%" left="42%" width="117px" height="117px" onClick={() => navigate("/firstteam")} />
+          <TeamIcon src={SecondTeamImg} top="39%" left="70%" width="126px" height="124px" onClick={() => navigate("/secondteam")} />
+          <TeamIcon src={ThirdTeamImg} top="59%" left="40%" width="138px" height="138px" onClick={() => navigate("/thirdteam")} />
           <TeamIcon src={DetailImg} top="43%" left="15%" onClick={() => navigate("/detail")} />
-          <TeamIcon src={ClickImg} top="16%" left="73%" />
+          <TeamIcon src={ClickImg} top="17%" left="70%" width="72px" height="51px" />
         </LandImgWrapper>
         <Footer />
       </ComponentWrapper>
@@ -60,6 +60,8 @@ const MainText = styled.span`
 `;
 
 const MainImg = styled.img`
+  width: 256px;
+  height: 139px;
   padding-top: 4rem;
 `;
 
@@ -74,11 +76,13 @@ const LandImage = styled.img`
   display: block;
 `;
 
-const TeamIcon = styled.img<{ top: string; left: string }>`
+const TeamIcon = styled.img<{ top: string; left: string; width: string; height: string; }>`
   position: absolute;
   cursor: pointer;
   top: ${({ top }) => top};
   left: ${({ left }) => left};
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
   transform: translate(-50%, -50%);
 `;
 

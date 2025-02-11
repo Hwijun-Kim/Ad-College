@@ -9,7 +9,7 @@ import {
   LinkButton,
   PreviewWrapper,
   SectionDivider,
-  StarIcon,
+  StarIcon, StoreImg,
   StorePreview, TeamPageWrapper, Text0, Text1, Text2,
   TextWrapper
 } from "./FirstTeamPage.tsx";
@@ -56,7 +56,7 @@ const ThirdTeamPage = () => {
                 <StarIcon className="star-icon bottom-left" />
                 <StarIcon className="star-icon bottom-right" />
                 <BoldTextBox>GACHA-BLE</BoldTextBox>
-                <img src={StoreImage} alt="store" />
+                <StoreImg src={StoreImage} alt="store" />
                 <TextWrapper>
                   <Text1>깔수록 깨끗해지는</Text1>
                   <Text2>친환경 가챠 캡슐!</Text2>
