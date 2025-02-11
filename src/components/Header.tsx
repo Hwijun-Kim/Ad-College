@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/Logo.png";
 import { useNavigate } from "react-router-dom";
 
 interface HeaderProps {
