@@ -84,7 +84,6 @@ const SliderWrapper = styled.div`
   height: 90%;
   overflow: hidden;
   border-radius: 24px;
-  background: black;
   margin: 0 auto;
   box-sizing: border-box;
 `;
