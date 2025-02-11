@@ -52,7 +52,7 @@ h1 {
   transform-origin: top center;
 }
 
-/* Desktop media query */
+/* 반응형 적용 */
 @media screen and (min-width: 480px) {
   .inner-wrapper {
     width: 375px;
