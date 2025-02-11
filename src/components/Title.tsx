@@ -41,7 +41,8 @@ const TitleWrapper = styled.div`
 `;
 
 const TitleText = styled.span`
-  font-weight: bold;
+  font-family: 'GumiRomanceTTF', cursive;
+  font-weight: 400;
   width: 125px;
   height: 30px;
   color: white;

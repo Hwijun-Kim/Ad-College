@@ -48,7 +48,7 @@ const FirstTeamPage = () => {
             <Title title={"스토어 소개"} />
             <TextWrapper>
               <BoldText>1팀에서 기획한 이상적인 상점 오픈!</BoldText>
-              <span>팀원 : 남정윤, 이상민, 이상혁, 이주현, 조해솔</span>
+              <Text0>팀원 : 남정윤, 이상민, 이상혁, 이주현, 조해솔</Text0>
             </TextWrapper>
             <PreviewWrapper>
               <StorePreview>
@@ -59,14 +59,14 @@ const FirstTeamPage = () => {
                 <BoldTextBox>SAVENERGY</BoldTextBox>
                 <img src={StoreImage} alt="store" />
                 <TextWrapper>
-                  <span>보증금 제도를 통해 환경을 보호하는</span>
-                  <span>일회용 보조배터리 자판기!</span>
+                  <Text1>보증금 제도를 통해 환경을 보호하는</Text1>
+                  <Text2>일회용 보조배터리 자판기!</Text2>
                 </TextWrapper>
               </StorePreview>
             </PreviewWrapper>
             <SectionDivider />
             <Title title={"스토어 상세"} />
-            <span>이미지와 영상을 통해 1팀의 상점을 둘러보세요.</span>
+            <Text0>이미지와 영상을 통해 1팀의 상점을 둘러보세요.</Text0>
             <ImgWrapper>
               <ImgSlider images={images} />
             </ImgWrapper>
@@ -94,11 +94,31 @@ export const ComponentWrapper = styled.div`
   gap: 1.5rem;
   width: 100%;
   min-height: 100%;
-  padding: 60px 0 2rem 0;
+  padding: 60px 0 0 0;
 `;
 
 export const BoldText = styled.span`
-  font-weight: bold;
+  font-weight: 700;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+`;
+
+export const GumiText = styled.span`
+  font-family: 'GumiRomanceTTF', cursive;
+  font-weight: 400;
+`;
+
+export const Text0 = styled.span`
+  font-weight: 500;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+`;
+
+export const Text1 = styled.span`
+  font-weight: 600;
+`;
+
+export const Text2 = styled.span`
+  font-weight: 800;
+  font-size: 18px;
 `;
 
 export const TextWrapper = styled.div`
@@ -130,7 +150,9 @@ export const LinkButton = styled.button`
   border-radius: 50px;
   border: none;
   color: white;
+  font-weight: 600;
   background: linear-gradient(to bottom, #A98BF8, #B375F8);
+  cursor: pointer;
 `;
 
 export const StorePreview = styled.div`
@@ -173,8 +195,7 @@ export const StorePreview = styled.div`
   }
 `;
 
-export const BoldTextBox = styled.span`
-  font-weight: bold;
+export const BoldTextBox = styled(GumiText)`
   width: 176px;
   height: 36px;
   color: white;

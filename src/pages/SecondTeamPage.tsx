@@ -10,7 +10,7 @@ import {
   PreviewWrapper,
   SectionDivider,
   StarIcon,
-  StorePreview, TeamPageWrapper,
+  StorePreview, TeamPageWrapper, Text0, Text1, Text2,
   TextWrapper
 } from "./FirstTeamPage.tsx";
 import StoreImage from "../assets/2teamStore.png";
@@ -59,7 +59,7 @@ const SecondTeamPage = () => {
             <Title title={"스토어 소개"} />
             <TextWrapper>
               <BoldText>2팀에서 기획한 이상적인 상점 오픈!</BoldText>
-              <span>팀원 : 김이은, 백수현, 심서형, 조현경, 한지선</span>
+              <Text0>팀원 : 김이은, 백수현, 심서형, 조현경, 한지선</Text0>
             </TextWrapper>
             <PreviewWrapper>
               <StorePreview>
@@ -70,14 +70,14 @@ const SecondTeamPage = () => {
                 <BoldTextBox>Separ/Ate</BoldTextBox>
                 <img src={StoreImage} alt="store" />
                 <TextWrapper>
-                  <span>단순한 포장 방식이 아니다</span>
-                  <span>패스트푸드 전체를 바꾸는 움직임!</span>
+                  <Text1>단순한 포장 방식이 아니다</Text1>
+                  <Text2>패스트푸드 전체를 바꾸는 움직임!</Text2>
                 </TextWrapper>
               </StorePreview>
             </PreviewWrapper>
             <SectionDivider />
             <Title title={"스토어 상세"} />
-            <span>이미지와 영상을 통해 2팀의 상점을 둘러보세요.</span>
+            <Text0>이미지와 영상을 통해 2팀의 상점을 둘러보세요.</Text0>
             <ImgWrapper>
               <ImgSlider images={images} />
             </ImgWrapper>

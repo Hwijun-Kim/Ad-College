@@ -10,7 +10,7 @@ import {
   PreviewWrapper,
   SectionDivider,
   StarIcon,
-  StorePreview, TeamPageWrapper,
+  StorePreview, TeamPageWrapper, Text0, Text1, Text2,
   TextWrapper
 } from "./FirstTeamPage.tsx";
 import StoreImage from "../assets/3teamStore.png";
@@ -47,7 +47,7 @@ const ThirdTeamPage = () => {
             <Title title={"스토어 소개"} />
             <TextWrapper>
               <BoldText>3팀에서 기획한 이상적인 상점 오픈!</BoldText>
-              <span>팀원 : 김건리, 김하영, 박지원, 신지인, 최훈지</span>
+              <Text0>팀원 : 김건리, 김하영, 박지원, 신지인, 최훈지</Text0>
             </TextWrapper>
             <PreviewWrapper>
               <StorePreview>
@@ -58,14 +58,14 @@ const ThirdTeamPage = () => {
                 <BoldTextBox>GACHA-BLE</BoldTextBox>
                 <img src={StoreImage} alt="store" />
                 <TextWrapper>
-                  <span>깔수록 깨끗해지는</span>
-                  <span>친환경 가챠 캡슐!</span>
+                  <Text1>깔수록 깨끗해지는</Text1>
+                  <Text2>친환경 가챠 캡슐!</Text2>
                 </TextWrapper>
               </StorePreview>
             </PreviewWrapper>
             <SectionDivider />
             <Title title={"스토어 상세"} />
-            <span>이미지와 영상을 통해 3팀의 상점을 둘러보세요.</span>
+            <Text0>이미지와 영상을 통해 3팀의 상점을 둘러보세요.</Text0>
             <ImgWrapper>
               <ImgSlider images={images} />
             </ImgWrapper>

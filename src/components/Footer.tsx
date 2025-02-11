@@ -19,6 +19,7 @@ const FooterContent = styled.div`
   flex-direction: column;
   font-size: 12px;
   color: #A8A8A8;
+  padding-bottom: 2rem;
 `;
 
 export default Footer;

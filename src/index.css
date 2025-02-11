@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Pretendard', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -58,4 +58,11 @@ h1 {
     width: 375px;
     max-width: 375px;
   }
+}
+
+@font-face {
+  font-family: 'GumiRomanceTTF';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/GumiRomanceTTF.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }

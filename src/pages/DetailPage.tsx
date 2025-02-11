@@ -2,7 +2,7 @@ import Header from "../components/Header.tsx";
 import styled from "styled-components";
 import Footer from "../components/Footer.tsx";
 import Title from "../components/Title.tsx";
-import { BoldText, TeamPageWrapper } from "./FirstTeamPage.tsx";
+import { GumiText, TeamPageWrapper } from "./FirstTeamPage.tsx";
 
 const DetailPage = () => {
     return (
@@ -12,8 +12,8 @@ const DetailPage = () => {
           <ComponentWrapper>
             <Title title={"프로젝트 소개"} />
             <Detail>
-              <BoldText>2025 상반기 윈터스쿨: 지속 가능한 지구를</BoldText>
-              <BoldText>위한 이상적인 온라인 전시회</BoldText>
+              <GumiText>2025 상반기 윈터스쿨: 지속 가능한 지구를</GumiText>
+              <GumiText>위한 이상적인 온라인 전시회</GumiText>
               <BoldText>[상상이상을 판매합니다, 이상!한 팝업 스토어]</BoldText>
               <br />
               <span>애드컬리지는 오늘날 사회적 문제로 대두되는 전시회와</span>
@@ -71,13 +71,17 @@ const ComponentWrapper = styled.div`
 const Detail = styled.div`
   display: flex;
   flex-direction: column;
-  align-item: center;
+  align-items: center;
   justify-content: center;
   width: 90%;
   height: 479px;
   border-radius: 24px;
   background: white;
   font-size: 12px;
+`;
+
+const BoldText = styled.span`
+  font-weight: 700;
 `;
 
 export default DetailPage;
