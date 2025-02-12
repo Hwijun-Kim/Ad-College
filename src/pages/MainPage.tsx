@@ -9,12 +9,38 @@ import SecondTeamImg from "../assets/2teamStore.png";
 import ThirdTeamImg from "../assets/3teamStore.png";
 import ClickImg from "../assets/ClickImg.png";
 import DetailImg from "../assets/DetailImg.png";
-// import { Modal } from "antd";
-// import { useState } from "react";
+import { Modal } from "antd";
+import { useEffect, useState } from "react";
+import Popup1 from "../assets/PopUp/Popup1.png";
+import Popup2 from "../assets/PopUp/Popup2.png";
+import Popup3 from "../assets/PopUp/Popup3.png";
+import Popup4 from "../assets/PopUp/Popup4.png";
+import Popup5 from "../assets/PopUp/Popup5.png";
+import Popup6 from "../assets/PopUp/Popup6.png";
+
+const popups = [Popup1, Popup2, Popup3, Popup4, Popup5, Popup6];
 
 const MainPage = () => {
   const navigate = useNavigate();
-  // const [isModalVisible, setIsModalVisible] = useState(true);
+  const [isModalVisible, setIsModalVisible] = useState<boolean>();
+
+  const [currentStep, setCurrentStep] = useState(0);
+
+  // useEffect(() => {
+  //   const hasVisited = localStorage.getItem("hasVisited");
+  //   if (!hasVisited) {
+  //     setIsModalVisible(true);
+  //     localStorage.setItem("hasVisited", "true");
+  //   }
+  // }, []);
+
+  const handleNext = () => {
+    if (currentStep < popups.length - 1) {
+      setCurrentStep(currentStep + 1);
+    } else {
+      setIsModalVisible(false);
+    }
+  };
 
   return (
     <PageWrapper>
@@ -27,22 +53,72 @@ const MainPage = () => {
         <LandImgWrapper>
           <LandImage src={LandImg} alt="land" />
 
-          <TeamIcon src={FirstTeamImg} top="22%" left="42%" width="117px" height="117px" onClick={() => navigate("/firstteam")} />
-          <TeamIcon src={SecondTeamImg} top="39%" left="70%" width="126px" height="124px" onClick={() => navigate("/secondteam")} />
-          <TeamIcon src={ThirdTeamImg} top="59%" left="40%" width="138px" height="138px" onClick={() => navigate("/thirdteam")} />
-          <TeamIcon src={DetailImg} top="43%" left="15%" width="44px" height="43px" onClick={() => navigate("/detail")} />
-          <TeamIcon src={ClickImg} top="17%" left="70%" width="72px" height="51px" />
+          <TeamIcon
+            src={FirstTeamImg}
+            top="22%"
+            left="42%"
+            width="117px"
+            height="117px"
+            onClick={() => navigate("/firstteam")}
+          />
+          <TeamIcon
+            src={SecondTeamImg}
+            top="39%"
+            left="70%"
+            width="126px"
+            height="124px"
+            onClick={() => navigate("/secondteam")}
+          />
+          <TeamIcon
+            src={ThirdTeamImg}
+            top="59%"
+            left="40%"
+            width="138px"
+            height="138px"
+            onClick={() => navigate("/thirdteam")}
+          />
+          <TeamIcon
+            src={DetailImg}
+            top="43%"
+            left="15%"
+            width="44px"
+            height="43px"
+            onClick={() => navigate("/detail")}
+          />
+          <TeamIcon
+            src={ClickImg}
+            top="17%"
+            left="70%"
+            width="72px"
+            height="51px"
+          />
         </LandImgWrapper>
         <Footer />
-        {/*<Modal*/}
-        {/*  open={isModalVisible}*/}
-        {/*  onCancel={() => setIsModalVisible(false)}*/}
-        {/*  closable={false}*/}
-        {/*  footer={null}*/}
-        {/*  centered*/}
-        {/*>*/}
-        {/*  <ModalButton />*/}
-        {/*</Modal>*/}
+        <Modal
+          open={isModalVisible}
+          onCancel={() => setIsModalVisible(false)}
+          closable={false}
+          footer={null}
+          centered
+          width={"90%"}
+          maskClosable={false}
+          styles={{
+            content: {
+              padding: 0,
+              borderRadius: "19px",
+            },
+          }}
+        >
+          <ModalWrapper>
+            <PopupImage
+              src={popups[currentStep]}
+              alt={`popup${currentStep + 1}`}
+            />
+            <ModalButton onClick={handleNext}>
+              {currentStep === popups.length - 1 ? "입장하기" : "NEXT >>"}
+            </ModalButton>
+          </ModalWrapper>
+        </Modal>
       </ComponentWrapper>
     </PageWrapper>
   );
@@ -99,12 +175,36 @@ const TeamIcon = styled.img<{ top: string; left: string; width: string; height: 
   transform: translate(-50%, -50%);
 `;
 
-// const ModalButton = styled.div`
-//   width: 91px;
-//   height: 25px;
-//   border-radius: 5px;
-//   border-bottom: 2px solid #742AC7;
-//   cursor: pointer;
-// `;
+const ModalWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #EFD9FA, #D6C6FF);
+  gap: 1rem;
+  border-radius: 19px;
+  padding: 1.5rem;
+`;
+
+const PopupImage = styled.img`
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+`;
+
+const ModalButton = styled.div`
+  font-family: "GumiRomanceTTF", cursive;
+  font-weight: 400;
+  width: 91px;
+  height: 25px;
+  border-radius: 5px;
+  border-bottom: 2px solid #742ac7;
+  cursor: pointer;
+  color: #b375f8;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  align-self: center;
+`;
 
 export default MainPage;
