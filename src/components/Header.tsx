@@ -1,19 +1,23 @@
 import styled from "styled-components";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/MainLogo.png";
 import { useNavigate } from "react-router-dom";
 
 interface HeaderProps {
   logoImage?: string;
 }
 
-const Header = ({ logoImage = Logo }: HeaderProps) => {
+const Header = ({ logoImage }: HeaderProps) => {
   const navigate = useNavigate();
   return (
     <HeaderWrapper>
       <IconWrapper onClick={() => navigate('/')}>
         <LeftArrowIcon />
       </IconWrapper>
-      <img src={logoImage} style={{ width: '90px', height: '30px' }} alt="logo" />
+      {logoImage ?
+        <img src={logoImage} style={{ width: '90px', height: '30px' }} alt="logo" />
+        :
+        <img src={Logo} style={{ width: '75px', height: '40px' }} alt="logo" />
+      }
     </HeaderWrapper>
   );
 }
