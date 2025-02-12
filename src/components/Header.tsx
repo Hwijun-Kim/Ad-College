@@ -13,7 +13,7 @@ const Header = ({ logoImage = Logo }: HeaderProps) => {
       <IconWrapper onClick={() => navigate('/')}>
         <LeftArrowIcon />
       </IconWrapper>
-      <img src={logoImage} alt="logo" />
+      <img src={logoImage} style={{ width: '90px', height: '30px' }} alt="logo" />
     </HeaderWrapper>
   );
 }

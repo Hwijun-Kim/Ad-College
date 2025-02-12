@@ -9,9 +9,13 @@ import SecondTeamImg from "../assets/2teamStore.png";
 import ThirdTeamImg from "../assets/3teamStore.png";
 import ClickImg from "../assets/ClickImg.png";
 import DetailImg from "../assets/DetailImg.png";
+// import { Modal } from "antd";
+// import { useState } from "react";
 
 const MainPage = () => {
   const navigate = useNavigate();
+  // const [isModalVisible, setIsModalVisible] = useState(true);
+
   return (
     <PageWrapper>
       <ComponentWrapper>
@@ -30,6 +34,15 @@ const MainPage = () => {
           <TeamIcon src={ClickImg} top="17%" left="70%" width="72px" height="51px" />
         </LandImgWrapper>
         <Footer />
+        {/*<Modal*/}
+        {/*  open={isModalVisible}*/}
+        {/*  onCancel={() => setIsModalVisible(false)}*/}
+        {/*  closable={false}*/}
+        {/*  footer={null}*/}
+        {/*  centered*/}
+        {/*>*/}
+        {/*  <ModalButton />*/}
+        {/*</Modal>*/}
       </ComponentWrapper>
     </PageWrapper>
   );
@@ -85,5 +98,13 @@ const TeamIcon = styled.img<{ top: string; left: string; width: string; height: 
   height: ${({ height }) => height};
   transform: translate(-50%, -50%);
 `;
+
+// const ModalButton = styled.div`
+//   width: 91px;
+//   height: 25px;
+//   border-radius: 5px;
+//   border-bottom: 2px solid #742AC7;
+//   cursor: pointer;
+// `;
 
 export default MainPage;
