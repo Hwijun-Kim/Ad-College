@@ -10,7 +10,7 @@ const DetailPage = () => {
         <Header />
         <TeamPageWrapper>
           <ComponentWrapper>
-            <Title title={"프로젝트 소개"} />
+            <Title title={"프로젝트 소개"} isDetailPage={true} />
             <Detail>
               <GumiText>2025 상반기 윈터스쿨: 지속 가능한 지구를</GumiText>
               <GumiText>위한 이상적인 온라인 전시회</GumiText>

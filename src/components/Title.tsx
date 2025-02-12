@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 interface TitleProps {
   title: string;
+  isDetailPage?: boolean;
 }
 
-const Title = ({ title }: TitleProps) => {
+const Title = ({ title, isDetailPage = false }: TitleProps) => {
   return (
-    <TitleWrapper>
+    <TitleWrapper isDetailPage={isDetailPage} >
       <TitleIcon />
       <TitleText>{title}</TitleText>
       <TitleIcon />
@@ -34,10 +35,11 @@ const TitleIcon = () => (
   </svg>
 );
 
-const TitleWrapper = styled.div`
+const TitleWrapper = styled.div<{ isDetailPage: boolean }>`
   display: flex;
   align-items: center;
   gap: 7px;
+  ${({ isDetailPage }) => isDetailPage && "padding-top: 2rem;"}
 `;
 
 const TitleText = styled.span`
