@@ -10,7 +10,7 @@ import {
   PreviewWrapper,
   SectionDivider,
   StarIcon, StoreImg,
-  StorePreview, TeamPageWrapper, Text0, Text1, Text2,
+  StorePreview, TeamPageBackGround, TeamPageWrapper, Text0, Text1, Text2,
   TextWrapper
 } from "./FirstTeamPage.tsx";
 import StoreImage from "../assets/3teamStore.png";
@@ -26,8 +26,7 @@ import Img6 from "../assets/3Team/3T-6.png";
 import Img7 from "../assets/3Team/3T-7.png";
 import Img8 from "../assets/3Team/3T-8.png";
 
-import BackGround from "../assets/BackGround.png";
-import { BackGroundImg } from "./DetailPage.tsx";
+import LongBackGround from "../assets/LongBackground.png";
 
 const images = [
   Img1,
@@ -45,7 +44,7 @@ const ThirdTeamPage = () => {
       <>
         <Header logoImage={ThirdTeamLogo} />
         <TeamPageWrapper>
-          <BackGroundImg src={BackGround} alt="backGround" />
+          <TeamPageBackGround src={LongBackGround} alt="backGround" />
           <ComponentWrapper>
             <Title title={"스토어 소개"} />
             <TextWrapper>

@@ -21,8 +21,7 @@ import Img12 from "../assets/1Team/1T-12.png";
 import Img13 from "../assets/1Team/1T-13.png";
 import Img14 from "../assets/1Team/1T-14.png";
 
-import BackGround from "../assets/BackGround.png";
-import { BackGroundImg } from "./DetailPage.tsx";
+import LongBackGround from "../assets/LongBackground.png";
 
 const images = [
   Img1,
@@ -46,7 +45,7 @@ const FirstTeamPage = () => {
       <>
         <Header logoImage={FirstTeamLogo} />
         <TeamPageWrapper>
-          <BackGroundImg src={BackGround} alt="backGround" />
+          <TeamPageBackGround src={LongBackGround} alt="backGround" />
           <ComponentWrapper>
             <Title title={"스토어 소개"} />
             <TextWrapper>
@@ -89,6 +88,14 @@ export const TeamPageWrapper = styled.div`
   overflow-y: auto;
   position: relative;
   z-index: -9998;
+`;
+
+export const TeamPageBackGround = styled.img`
+  width: 100%;
+  height: auto;
+  z-index: -9999;
+  position: absolute;
+  left: 0%;
 `;
 
 export const ComponentWrapper = styled.div`
@@ -151,7 +158,7 @@ export const PreviewWrapper = styled.div`
 
 export const SectionDivider = styled.div`
   width: 100%;
-  height: 165px;
+  height: 156px;
 `;
 
 export const LinkButton = styled.button`

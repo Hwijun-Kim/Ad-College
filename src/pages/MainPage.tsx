@@ -100,7 +100,6 @@ const MainPage = () => {
           closable={false}
           footer={null}
           centered
-          width={"90%"}
           maskClosable={false}
           styles={{
             content: {
@@ -205,7 +204,7 @@ const ModalWrapper = styled.div`
 const PopupImage = styled.img`
   border-radius: 12px;
   width: 100%;
-  max-width: 500px;
+  max-width: 480px;
 `;
 
 const ModalButton = styled.div`

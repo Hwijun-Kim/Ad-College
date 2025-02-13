@@ -83,7 +83,7 @@ const Detail = styled.div`
   font-size: 12px;
 `;
 
-export const BackGroundImg = styled.img`
+const BackGroundImg = styled.img`
   width: 644px;
   height: 644px;
   position: absolute;

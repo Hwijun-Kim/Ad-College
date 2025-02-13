@@ -10,7 +10,7 @@ import {
   PreviewWrapper,
   SectionDivider,
   StarIcon, StoreImg,
-  StorePreview, TeamPageWrapper, Text0, Text1, Text2,
+  StorePreview, TeamPageBackGround, TeamPageWrapper, Text0, Text1, Text2,
   TextWrapper
 } from "./FirstTeamPage.tsx";
 import StoreImage from "../assets/2teamStore.png";
@@ -33,8 +33,7 @@ import Img13 from "../assets/2Team/2T-13.jpg";
 import Img14 from "../assets/2Team/2T-14.jpg";
 import Img15 from "../assets/2Team/2T-15.jpg";
 
-import BackGround from "../assets/BackGround.png";
-import { BackGroundImg } from "./DetailPage.tsx";
+import LongBackGround from "../assets/LongBackground.png";
 
 const images = [
   Img1,
@@ -59,7 +58,7 @@ const SecondTeamPage = () => {
       <>
         <Header logoImage={SecondTeamLogo} />
         <TeamPageWrapper>
-          <BackGroundImg src={BackGround} alt="backGround" />
+          <TeamPageBackGround src={LongBackGround} alt="backGround" />
           <ComponentWrapper>
             <Title title={"스토어 소개"} />
             <TextWrapper>
