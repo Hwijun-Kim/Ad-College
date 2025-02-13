@@ -4,11 +4,14 @@ import Footer from "../components/Footer.tsx";
 import Title from "../components/Title.tsx";
 import { GumiText, TeamPageWrapper } from "./FirstTeamPage.tsx";
 
+import BackGround from "../assets/BackGround.png";
+
 const DetailPage = () => {
     return (
       <>
         <Header />
         <TeamPageWrapper>
+          <BackGroundImg src={BackGround} alt="backGround" />
           <ComponentWrapper>
             <Title title={"프로젝트 소개"} isDetailPage={true} />
             <Detail>
@@ -78,6 +81,15 @@ const Detail = styled.div`
   border-radius: 24px;
   background: white;
   font-size: 12px;
+`;
+
+export const BackGroundImg = styled.img`
+  width: 644px;
+  height: 644px;
+  position: absolute;
+  z-index: -9999;
+  right: 1%;
+  bottom: 45%;
 `;
 
 const BoldText = styled.span`

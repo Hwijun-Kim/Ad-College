@@ -17,27 +17,30 @@ import StoreImage from "../assets/2teamStore.png";
 import Footer from "../components/Footer.tsx";
 import ImgSlider from "../components/ImgSlider.tsx";
 
-import Img1 from "../assets/2Team/2T-1.jpeg";
-import Img2 from "../assets/2Team/2T-2.jpeg";
-import Img3 from "../assets/2Team/2T-3.jpeg";
-import Img4 from "../assets/2Team/2T-4.jpeg";
-import Img5 from "../assets/2Team/2T-5.jpeg";
-import Img6 from "../assets/2Team/2T-6.jpeg";
-import Img7 from "../assets/2Team/2T-7.jpeg";
-import Img8 from "../assets/2Team/2T-8.jpeg";
-import Img9 from "../assets/2Team/2T-9.jpeg";
-import Img10 from "../assets/2Team/2T-10.jpeg";
-import Img11 from "../assets/2Team/2T-11.jpeg";
-import Img12 from "../assets/2Team/2T-12.jpeg";
-import Img13 from "../assets/2Team/2T-13.jpeg";
-import Img14 from "../assets/2Team/2T-14.jpeg";
+import Img1 from "../assets/2Team/2T-1.jpg";
+import Img2 from "../assets/2Team/2T-2.jpg";
+import Img3 from "../assets/2Team/2T-3.jpg";
+import Img4 from "../assets/2Team/2T-4.jpg";
+import Img5 from "../assets/2Team/2T-5.jpg";
+import Img6 from "../assets/2Team/2T-6.jpg";
+import Img7 from "../assets/2Team/2T-7.jpg";
+import Img8 from "../assets/2Team/2T-8.jpg";
+import Img9 from "../assets/2Team/2T-9.jpg";
+import Img10 from "../assets/2Team/2T-10.jpg";
+import Img11 from "../assets/2Team/2T-11.jpg";
+import Img12 from "../assets/2Team/2T-12.jpg";
+import Img13 from "../assets/2Team/2T-13.jpg";
+import Img14 from "../assets/2Team/2T-14.jpg";
+import Img15 from "../assets/2Team/2T-15.jpg";
+
+import BackGround from "../assets/BackGround.png";
+import { BackGroundImg } from "./DetailPage.tsx";
 
 const images = [
   Img1,
   Img2,
   Img3,
   Img4,
-  Img5,
   Img5,
   Img6,
   Img7,
@@ -48,6 +51,7 @@ const images = [
   Img12,
   Img13,
   Img14,
+  Img15
 ];
 
 const SecondTeamPage = () => {
@@ -55,6 +59,7 @@ const SecondTeamPage = () => {
       <>
         <Header logoImage={SecondTeamLogo} />
         <TeamPageWrapper>
+          <BackGroundImg src={BackGround} alt="backGround" />
           <ComponentWrapper>
             <Title title={"스토어 소개"} />
             <TextWrapper>

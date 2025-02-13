@@ -26,12 +26,14 @@ import Img6 from "../assets/3Team/3T-6.png";
 import Img7 from "../assets/3Team/3T-7.png";
 import Img8 from "../assets/3Team/3T-8.png";
 
+import BackGround from "../assets/BackGround.png";
+import { BackGroundImg } from "./DetailPage.tsx";
+
 const images = [
   Img1,
   Img2,
   Img3,
   Img4,
-  Img5,
   Img5,
   Img6,
   Img7,
@@ -43,6 +45,7 @@ const ThirdTeamPage = () => {
       <>
         <Header logoImage={ThirdTeamLogo} />
         <TeamPageWrapper>
+          <BackGroundImg src={BackGround} alt="backGround" />
           <ComponentWrapper>
             <Title title={"스토어 소개"} />
             <TextWrapper>

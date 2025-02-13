@@ -6,7 +6,7 @@ interface FooterProps {
 
 const Footer = ({ isTeamPage = false }: FooterProps) => {
   return (
-    <FooterContent>
+    <FooterContent isTeamPage={isTeamPage}>
       <span>@adcollege</span>
       <span>adcollege.head@gmail.com</span>
       {isTeamPage && <span>페이지 제작: 김윤주, 김휘준, 이다은, 이연주</span>}
@@ -14,12 +14,13 @@ const Footer = ({ isTeamPage = false }: FooterProps) => {
   );
 };
 
-const FooterContent = styled.div`
+const FooterContent = styled.div<{ isTeamPage: boolean }>`
   display: flex;
   flex-direction: column;
   font-size: 12px;
   color: #A8A8A8;
   padding-bottom: 2rem;
+  ${({ isTeamPage }) => !isTeamPage && "padding-top: 2rem;"}
 `;
 
 export default Footer;

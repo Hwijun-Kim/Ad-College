@@ -65,7 +65,7 @@ const ImgSlider = ({ images }: ImgSliderProps) => {
         onTouchEnd={handleDragEnd}
       >
         {images.map((img, index) => (
-          <Slide key={index}>
+          <Slide key={`${img}-${index}`}>
             <img src={img} alt={`Slide ${index + 1}`} draggable="false" />
           </Slide>
         ))}

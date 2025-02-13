@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import { useNavigate } from "react-router-dom";
 import MainLogo from "../assets/MainLogo.png";
 import LandImg from "../assets/LandImg.png";
@@ -85,7 +85,7 @@ const MainPage = () => {
             height="43px"
             onClick={() => navigate("/detail")}
           />
-          <TeamIcon
+          <ClickButton
             src={ClickImg}
             top="17%"
             left="70%"
@@ -165,6 +165,18 @@ const LandImage = styled.img`
   display: block;
 `;
 
+const float = keyframes`
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+`;
+
 const TeamIcon = styled.img<{ top: string; left: string; width: string; height: string; }>`
   position: absolute;
   cursor: pointer;
@@ -175,9 +187,15 @@ const TeamIcon = styled.img<{ top: string; left: string; width: string; height: 
   transform: translate(-50%, -50%);
 `;
 
+const ClickButton = styled(TeamIcon)`
+  animation: ${float} 3s ease-in-out infinite;
+`;
+
 const ModalWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(to bottom, #EFD9FA, #D6C6FF);
   gap: 1rem;
   border-radius: 19px;
