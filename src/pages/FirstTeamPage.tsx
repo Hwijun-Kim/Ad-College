@@ -72,7 +72,13 @@ const FirstTeamPage = () => {
             <ImgWrapper>
               <ImgSlider images={images} />
             </ImgWrapper>
-            <LinkButton>릴스 보러가기</LinkButton>
+            <LinkButton
+              href="https://www.instagram.com/reel/DGCguOkT2vB/?igsh=cDV6M3JhZmxyd2Zn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              릴스 보러가기
+            </LinkButton>
             <SectionDivider />
             <Footer isTeamPage={true} />
           </ComponentWrapper>
@@ -162,7 +168,10 @@ export const SectionDivider = styled.div`
   height: 156px;
 `;
 
-export const LinkButton = styled.button`
+export const LinkButton = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 260px;
   height: 30px;
   border-radius: 50px;
@@ -171,6 +180,7 @@ export const LinkButton = styled.button`
   font-weight: 600;
   background: linear-gradient(to bottom, #A98BF8, #B375F8);
   cursor: pointer;
+  text-decoration: none;
 `;
 
 export const StorePreview = styled.div`

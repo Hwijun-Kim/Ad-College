@@ -85,7 +85,13 @@ const SecondTeamPage = () => {
             <ImgWrapper>
               <ImgSlider images={images} />
             </ImgWrapper>
-            <LinkButton>릴스 보러가기</LinkButton>
+            <LinkButton
+              href="https://www.instagram.com/reel/DGCgkEITfCk/?igsh=NXNmYTl1bXk0bW56"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              릴스 보러가기
+            </LinkButton>
             <SectionDivider />
             <Footer isTeamPage={true} />
           </ComponentWrapper>
