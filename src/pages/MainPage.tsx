@@ -10,7 +10,7 @@ import ThirdTeamImg from "../assets/3teamStore.png";
 import ClickImg from "../assets/ClickImg.png";
 import DetailImg from "../assets/DetailImg.png";
 import { Modal } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Popup1 from "../assets/PopUp/Popup1.png";
 import Popup2 from "../assets/PopUp/Popup2.png";
 import Popup3 from "../assets/PopUp/Popup3.png";
@@ -23,17 +23,17 @@ const popups = [Popup1, Popup2, Popup3, Popup4, Popup5, Popup6];
 
 const MainPage = () => {
   const navigate = useNavigate();
-  const [isModalVisible, setIsModalVisible] = useState<boolean>(true);
+  const [isModalVisible, setIsModalVisible] = useState<boolean>();
 
   const [currentStep, setCurrentStep] = useState(0);
 
-  // useEffect(() => {
-  //   const hasVisited = localStorage.getItem("hasVisited");
-  //   if (!hasVisited) {
-  //     setIsModalVisible(true);
-  //     localStorage.setItem("hasVisited", "true");
-  //   }
-  // }, []);
+  useEffect(() => {
+    const hasVisited = localStorage.getItem("hasVisited");
+    if (!hasVisited) {
+      setIsModalVisible(true);
+      localStorage.setItem("hasVisited", "true");
+    }
+  }, []);
 
   const handleNext = () => {
     if (currentStep < popups.length - 1) {
