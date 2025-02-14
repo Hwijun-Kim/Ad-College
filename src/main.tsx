@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
+import { Analytics } from "@vercel/analytics/vue";
 
 const adjustScale = () => {
     const width = window.innerWidth;
@@ -20,7 +21,8 @@ createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <div className="outer-wrapper">
             <div className="inner-wrapper">
-                <App />
+              <App />
+              <Analytics />
             </div>
         </div>
     </StrictMode>
