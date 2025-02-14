@@ -17,6 +17,7 @@ import Popup3 from "../assets/PopUp/Popup3.png";
 import Popup4 from "../assets/PopUp/Popup4.png";
 import Popup5 from "../assets/PopUp/Popup5.png";
 import Popup6 from "../assets/PopUp/Popup6.png";
+import ShootingStars from "../components/ShootingStars.tsx";
 
 const popups = [Popup1, Popup2, Popup3, Popup4, Popup5, Popup6];
 
@@ -44,6 +45,7 @@ const MainPage = () => {
 
   return (
     <PageWrapper>
+      <ShootingStars />
       <ComponentWrapper>
         <MainImg src={MainLogo} alt="logo" />
         <TextWrapper>
@@ -128,6 +130,7 @@ const PageWrapper = styled.div`
   height: 100%;
   overflow-y: auto;
   background: linear-gradient(to bottom, #EBCBFF, #FFEBBF);
+  position: relative;
 `;
 
 const ComponentWrapper = styled.div`
@@ -138,6 +141,7 @@ const ComponentWrapper = styled.div`
   gap: 1rem;
   width: 100%;
   min-height: 100%;
+  z-index: 2;
 `;
 
 const MainText = styled.span`
