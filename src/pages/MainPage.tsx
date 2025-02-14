@@ -155,6 +155,7 @@ const MainImg = styled.img`
   width: 256px;
   height: 139px;
   padding-top: 4rem;
+  z-index: 1;
 `;
 
 const LandImgWrapper = styled.div`

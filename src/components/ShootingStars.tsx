@@ -3,25 +3,49 @@ import styled, { keyframes } from 'styled-components';
 const ShootingStars = () => {
   return (
     <StarsContainer>
-      <StarWrapper delay={0} duration={7} top="-5%" left="70%">
+      <StarWrapper delay={0} duration={7} top="-2%" left="70%">
         <ShootingStar>
           <AnimatedStar className="star" />
           <Trail />
         </ShootingStar>
       </StarWrapper>
-      <StarWrapper delay={3} duration={6} top="-5%" left="30%">
+      <StarWrapper delay={3} duration={6} top="-2%" left="30%">
         <ShootingStar>
           <AnimatedStar className="star" />
           <Trail />
         </ShootingStar>
       </StarWrapper>
-      <StarWrapper delay={5} duration={8} top="-5%" left="85%">
+      <StarWrapper delay={5} duration={8} top="-2%" left="85%">
         <ShootingStar>
           <AnimatedStar className="star" />
           <Trail />
         </ShootingStar>
       </StarWrapper>
       <StarWrapper delay={7} duration={5} top="5%" left="105%">
+        <ShootingStar>
+          <AnimatedStar className="star" />
+          <Trail />
+        </ShootingStar>
+      </StarWrapper>
+      <StarWrapper delay={2} duration={7} top="-2%" left="700%">
+        <ShootingStar>
+          <AnimatedStar className="star" />
+          <Trail />
+        </ShootingStar>
+      </StarWrapper>
+      <StarWrapper delay={4} duration={6} top="-2%" left="90%">
+        <ShootingStar>
+          <AnimatedStar className="star" />
+          <Trail />
+        </ShootingStar>
+      </StarWrapper>
+      <StarWrapper delay={6} duration={8} top="-2%" left="55%">
+        <ShootingStar>
+          <AnimatedStar className="star" />
+          <Trail />
+        </ShootingStar>
+      </StarWrapper>
+      <StarWrapper delay={8} duration={5} top="10%" left="105%">
         <ShootingStar>
           <AnimatedStar className="star" />
           <Trail />
@@ -76,7 +100,7 @@ const StarsContainer = styled.div`
   height: 100%;
   overflow: hidden;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 `;
 
 const StarWrapper = styled.div<{ delay: number; duration: number; top: string; left: string }>`
